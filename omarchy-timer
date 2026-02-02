@@ -17,7 +17,7 @@ if [ "$1" == "install" ]; then
   fi
 
   clear
-  echo "Add the following content to your waybar config:"
+  echo -e "Add the following content to your waybar config:\n"
   cat << 'EOF'
 {
   ...
@@ -41,7 +41,7 @@ EOF
   fi
 
   clear
-  echo "Add the following keybindings and windowrule to your hyprland config:"
+  echo -e "Add the following keybindings and windowrule to your hyprland config:\n"
   cat << 'EOF'
 # omarchy-timer launch shortcut
 bindd = SUPER ALT, T, Set Timer, exec, omarchy-launch-tui omarchy-timer
@@ -69,7 +69,7 @@ EOF
 
   echo "Moving this file to /usr/bin/omarchy-timer..."
   if sudo mv "$0" /usr/bin/omarchy-timer; then
-    echo "Installation complete."
+    echo -e "Installation complete.\n"
     show_usage
     exit 0
   else
