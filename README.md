@@ -5,6 +5,7 @@ Adds a minimal timer TUI utility, which integrates with waybar and has the abili
 > This utility is Omarchy specific and depends only on packages, which are already pre-installed by default on omarchy.
 
 ## Demo
+https://github.com/user-attachments/assets/fbf8f58f-75bb-450d-9cd3-4e1d9c1f1062
 
 ## Installation
 ```bash
