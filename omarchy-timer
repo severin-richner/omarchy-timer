@@ -90,9 +90,13 @@ elif [ "$1" == "uninstall" ]; then
   fi
 
   echo "Removing /usr/bin/omarchy-timer..."
-  rm -f /usr/bin/omarchy-timer
-
-  echo "Successfully uninstalled omarchy-timer."
+  if sudo rm -f /usr/bin/omarchy-timer; then
+    echo "Successfully uninstalled omarchy-timer."
+    exit 0
+  else
+    echo "Failed to remove /usr/bin/omarchy-timer. Remove it manually to complete uninstallation."
+    exit 1
+  fi
   exit 0
 
 elif [ "$1" == "waybar-indicator" ]; then
