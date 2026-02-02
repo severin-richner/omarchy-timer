@@ -16,6 +16,7 @@ if [ "$1" == "install" ]; then
     exit 1
   fi
 
+  clear
   echo "Add the following content to your waybar config:"
   cat << 'EOF'
 {
@@ -39,6 +40,7 @@ EOF
     exit 1
   fi
 
+  clear
   echo "Add the following keybindings and windowrule to your hyprland config:"
   cat << 'EOF'
 # omarchy-timer launch shortcut
@@ -60,6 +62,7 @@ EOF
     exit 1
   fi
 
+  clear
   echo "Restarting hyprland and waybar..."
   omarchy-restart-hyprctl
   omarchy-restart-waybar
